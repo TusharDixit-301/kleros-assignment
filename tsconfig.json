@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": false,
+    "noUncheckedIndexedAccess": false,
+    "checkJs": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
+    /* Bundled projects */
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "incremental": true,
+
+    /* Type checking */
+    "types": ["node"],
+
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/shared/components/core/*": ["./src/shared/components/core/*"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "eslintConfig": {
+    "rules": {
+      "@typescript-eslint/no-explicit-any": "off"
+    }
+  },
+  "parserOptions": {
+    "extraFileExtensions": [".json"]
+  },
+  "include": [
+    ".eslintrc.cjs",
+    "svgr.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "next.config.js",
+    ".next",
+    ".claude",
+    ".github",
+    ".husky",
+    ".vscode",
+    "docs",
+    "public",
+    "scripts"
+  ]
+}
