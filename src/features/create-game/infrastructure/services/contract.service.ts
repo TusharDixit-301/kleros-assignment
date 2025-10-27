@@ -121,7 +121,6 @@ export class ContractService {
     try {
       // Generate salt
       const salt = await this.generateSalt();
-      console.log("Generated salt:", salt.toString());
 
       // Deploy Hasher Contract
       const hasherAddress = await this.deployHasherContract(userAddress, onProgress);
